@@ -1,1 +1,214 @@
-/*# sourceMappingURL=style.css.map */
+@font-face {
+  font-family: "Allura";
+  src: url(../../fonts/Allura-Regular.ttf);
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(../../fonts/Poppins-Medium.ttf);
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(../../fonts/Roboto-VariableFont_wdth\,wght.ttf);
+}
+li {
+  list-style: none;
+}
+
+input {
+  outline: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Roboto";
+}
+
+header {
+  height: 100vh;
+  background: url(../../../img/bg-slider-06.jpg) center/cover;
+  color: rgb(221, 221, 221);
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px 0;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+@media screen and (max-width: 1000px) {
+  header nav {
+    width: 100%;
+  }
+}
+header nav h1 {
+  width: 10%;
+  font-family: "Allura";
+  font-size: 2.8rem;
+  margin: 0 10px 0 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+header nav .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 200;
+  margin-right: 10px;
+}
+@media screen and (max-width: 800px) {
+  header nav .navbar {
+    display: none;
+  }
+}
+header nav .navbar li {
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+header nav .navbar li:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+header nav .resaux {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 10%;
+  font-size: 0.8rem;
+  margin-right: 10px;
+}
+@media screen and (max-width: 800px) {
+  header nav .resaux {
+    font-size: 1rem;
+    min-width: 100px;
+    width: 25%;
+    max-width: 300px;
+  }
+}
+header nav .resaux i {
+  cursor: pointer;
+}
+header nav .resaux i:hover {
+  -webkit-animation: rotatebtn 0.4s ease forwards;
+          animation: rotatebtn 0.4s ease forwards;
+}
+@-webkit-keyframes rotatebtn {
+  to {
+    -webkit-transform: rotateX(55deg);
+            transform: rotateX(55deg);
+  }
+}
+@keyframes rotatebtn {
+  to {
+    -webkit-transform: rotateX(55deg);
+            transform: rotateX(55deg);
+  }
+}
+header .header-container {
+  width: 60%;
+  margin-bottom: 80px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+@media screen and (max-width: 590px) {
+  header .header-container {
+    width: 90%;
+  }
+}
+header .header-container h2 {
+  text-align: center;
+  font-family: "Allura";
+  color: rgba(202, 110, 30, 0.801);
+  font-size: 3.5rem;
+  line-height: 55px;
+  font-weight: 300;
+}
+header .header-container h2 div {
+  font-family: "Roboto";
+  color: rgb(221, 221, 221);
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  font-size: 4rem;
+  font-weight: 800;
+}
+@media screen and (max-width: 730px) {
+  header .header-container h2 {
+    font-size: 2.6rem;
+    line-height: 70px;
+  }
+}
+@media screen and (max-width: 730px) {
+  header .header-container h2 div {
+    font-size: 3rem;
+    font-weight: 750;
+  }
+}
+header .header-container span img {
+  margin: 40px 0;
+  height: 30px;
+}
+@media screen and (max-width: 440px) {
+  header .header-container span img {
+    margin: 20px 0;
+  }
+}
+header .header-container p {
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  font-weight: 200;
+}
+@media screen and (max-width: 730px) {
+  header .header-container p {
+    font-size: 0.9rem;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 440px) {
+  header .header-container p {
+    font-size: 0.7rem;
+  }
+}/*# sourceMappingURL=style.css.map */
