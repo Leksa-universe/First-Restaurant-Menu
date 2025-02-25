@@ -13,10 +13,11 @@
     src: url(../../fonts/Roboto-VariableFont_wdth\,wght.ttf);
 }
 
-$black1: rgba(0, 0, 0, 0.92);
-$white1: rgb(221, 221, 221);
+$black1: rgb(32, 32, 32);
+$white1: rgb(243, 243, 243);
 $grey1: grey;
 $gold1: rgba(202, 110, 30, 0.801);
+$red1: rgb(128, 0, 0);
 
 $font1: 'Allura';
 $font2: 'Poppins';
@@ -26,15 +27,12 @@ $font3: 'Roboto';
     text-align: center;
     font-family: $font1;
     color: $gold1;
-    font-size: 3.5rem;
-    line-height: 55px;
     font-weight: 300;
+    text-transform: capitalize;
     div {
-        font-family: $font3;
+        font-family: $font2;
         color: $white1;
         text-transform: uppercase;
-        letter-spacing: 10px;
-        font-size: 4rem;
         font-weight: 800;
     }
 }
@@ -56,4 +54,5 @@ input {
 body {
     height: 100vh;
     font-family: $font3;
+    background: $black1;
 }

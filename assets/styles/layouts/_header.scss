@@ -39,7 +39,7 @@ header  {
             width: 80%;
             text-transform: uppercase;
             font-size: 0.8rem;
-            font-weight: 200;  
+            font-weight: 300;  
             margin-right: 10px;
 
             @media screen and (max-width:800px) {
@@ -49,8 +49,54 @@ header  {
             li {
                 cursor: pointer;
                 transition: 0.4s;
+                padding: 8px 0;
+                position: relative;
+
                 &:hover {
-                    transform: scale(1.2);
+                    color: $gold1;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        border: 1px solid $red1;
+                        top: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        animation: scaleborder 0.5s forwards;
+                        
+    
+                        @keyframes scaleborder {
+                            0% {
+                                width: 0;
+                            }
+    
+                            100% {
+                                width: 100%;
+                            }
+                        }
+                    }
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            border: 1px solid $red1;
+                            bottom: 0;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            animation: scaleborder2 0.5s forwards;
+        
+                            @keyframes scaleborder2 {
+                                0% {
+                                    width: 0;
+                                }
+        
+                                100% {
+                                    width: 100%;
+                                }
+                            }
+                        }
+
+
                 }         
             }
         }
@@ -72,15 +118,10 @@ header  {
 
             i {
                 cursor: pointer;
+                transition: 0.3s;
 
                 &:hover {
-                    animation: rotatebtn  0.4s ease forwards;
-
-                    @keyframes rotatebtn {
-                        to {
-                            transform: rotateX(55deg);
-                        }
-                    }
+                    color: $gold1;
                 }
             }
         }
@@ -88,8 +129,23 @@ header  {
     
     .header-container {
         width: 60%;
-        margin-bottom: 80px;
+        margin-bottom: 110px;
         user-select: none;
+        animation: headanim 3s forwards;        
+        
+        @keyframes headanim {
+            from {
+                opacity: 0;
+                scale: 1.4;
+                transform: translateY(-200px);
+            }
+            
+            to {
+                opacity: 1;
+                scale: 1;
+                transform: translateY(0);
+            }
+        }
 
         @media screen and (max-width:590px) {
             width: 90%;
@@ -97,15 +153,18 @@ header  {
 
         h2 {
             @include tittle;
-            @media screen and (max-width:730px) {
+            font-size: 4.5rem;
+            line-height: 70px;
+            @media screen and (max-width:813px) {
                 font-size: 2.6rem;
-                line-height: 70px;
+            }
+            @media screen and (max-width:397px) {
+                font-size: 2.2rem;                
             }
             div {
-
-                @media screen and (max-width:730px) {
-                    font-size: 3rem;
-                    font-weight: 750;
+                font-size: 4.6rem;
+                @media screen and (max-width:813px) {
+                    font-size: 2rem;
                 }
             }
         }
