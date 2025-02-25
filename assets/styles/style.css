@@ -428,49 +428,55 @@ header .header-container p {
     align-items: center;
   }
 }
-.section2 .bottom-part .card li {
+.section2 .bottom-part .card .left-part,
+.section2 .bottom-part .card .right-part {
+  width: 85%;
+}
+.section2 .bottom-part .card .left-part li,
+.section2 .bottom-part .card .right-part li {
   padding: 40px 20px 40px 0;
   display: flex;
   align-items: center;
   border-bottom: 1px dashed rgb(32, 32, 32);
 }
-.section2 .bottom-part .card li img {
+.section2 .bottom-part .card .left-part li img,
+.section2 .bottom-part .card .right-part li img {
   border-radius: 150px;
 }
-.section2 .bottom-part .card li .li-container {
+.section2 .bottom-part .card .left-part li .li-container,
+.section2 .bottom-part .card .right-part li .li-container {
   display: flex;
   flex-direction: column;
   width: 60%;
   margin: 0 10px 0 10px;
   font-family: "Roboto";
 }
-.section2 .bottom-part .card li .li-container h5 {
+.section2 .bottom-part .card .left-part li .li-container h5,
+.section2 .bottom-part .card .right-part li .li-container h5 {
   text-transform: uppercase;
   font-weight: 400;
   font-size: 0.9rem;
 }
 @media screen and (max-width: 914px) {
-  .section2 .bottom-part .card li .li-container h5 {
+  .section2 .bottom-part .card .left-part li .li-container h5,
+  .section2 .bottom-part .card .right-part li .li-container h5 {
     font-size: 0.7rem;
   }
 }
-.section2 .bottom-part .card li .li-container p {
+.section2 .bottom-part .card .left-part li .li-container p,
+.section2 .bottom-part .card .right-part li .li-container p {
   width: 92%;
   padding-top: 5px;
   font-weight: 300;
   line-height: 20px;
 }
 @media screen and (max-width: 914px) {
-  .section2 .bottom-part .card li .li-container p {
+  .section2 .bottom-part .card .left-part li .li-container p,
+  .section2 .bottom-part .card .right-part li .li-container p {
     font-size: 0.8rem;
   }
 }
-.section2 .bottom-part .card li span {
+.section2 .bottom-part .card .left-part li span,
+.section2 .bottom-part .card .right-part li span {
   color: rgba(202, 110, 30, 0.801);
-}
-.section2 .bottom-part .card li .left-part {
-  width: 100%;
-}
-.section2 .bottom-part .card li .right-part {
-  width: 100%;
 }/*# sourceMappingURL=style.css.map */

@@ -79,58 +79,56 @@
                 
             }
 
-            li {
-                padding: 40px 20px 40px 0;
-                display: flex;
-                align-items: center;
-                border-bottom: 1px dashed $black1;
-                img {
-                    border-radius: 150px;
-                }
-                .li-container {
-                    display: flex;  
-                    flex-direction: column;
-                    width: 60%;
-                    margin: 0 10px 0 10px;
-                    font-family: $font3;
-                    
-                    h5 {
-                        text-transform: uppercase;
-                        font-weight: 400;
-                        font-size: 0.9rem;
-
-                        @media screen and (max-width: 914px) {
-                            font-size: 0.7rem;
+            .left-part, 
+            .right-part {
+                width: 85%;
+                
+                li {
+                    padding: 40px 20px 40px 0;
+                    display: flex;
+                    align-items: center;
+                    border-bottom: 1px dashed $black1;
+                    img {
+                        border-radius: 150px;
+                    }
+                    .li-container {
+                        display: flex;  
+                        flex-direction: column;
+                        width: 60%;
+                        margin: 0 10px 0 10px;
+                        font-family: $font3;
+                        
+                        h5 {
+                            text-transform: uppercase;
+                            font-weight: 400;
+                            font-size: 0.9rem;
                             
+                            @media screen and (max-width: 914px) {
+                                font-size: 0.7rem;
+                                
+                            }
+                        }
+                        
+                        p {
+                            width: 92%;
+                            padding-top: 5px;
+                            font-weight: 300;
+                            line-height: 20px;
+                            
+                            @media screen and (max-width: 914px) {
+                                font-size: 0.8rem;
+                                
+                            }
                         }
                     }
                     
-                    p {
-                        width: 92%;
-                        padding-top: 5px;
-                        font-weight: 300;
-                        line-height: 20px;
-
-                        @media screen and (max-width: 914px) {
-                            font-size: 0.8rem;
-                            
-                        }
+                    span {
+                        color: $gold1;
                     }
-                }
-
-                span {
-                    color: $gold1;
-                }
-
-                .left-part {
-                    width: 100%;
-                }
-
-                .right-part {
-                    width: 100%;
+                    
                 }
             }
+            }
         }
-    }
 
 }
