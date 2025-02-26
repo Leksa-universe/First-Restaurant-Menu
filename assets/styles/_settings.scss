@@ -13,10 +13,10 @@
     src: url(../../fonts/Roboto-VariableFont_wdth\,wght.ttf);
 }
 
-$black1: rgb(32, 32, 32);
+$black1: rgb(43, 41, 41);
 $white1: rgb(243, 243, 243);
-$grey1: grey;
-$gold1: rgba(202, 110, 30, 0.801);
+$grey1: rgb(206, 206, 206);
+$gold1: rgba(238, 158, 89, 0.801);
 $red1: rgb(128, 0, 0);
 
 $font1: 'Allura';
@@ -55,4 +55,5 @@ body {
     height: 100vh;
     font-family: $font3;
     background: $black1;
+    outline: none;
 }
