@@ -1,5 +1,5 @@
 .online-book {
-    min-height: 800px;
+    min-height: 500px;
     padding: 0 10px;
 
     .online-book-container {
@@ -110,6 +110,7 @@
                 font-size: 3rem;
                 line-height: 35px;
                 margin-top: 40px;
+                color: $gold2;
                 
                 div {
                     color: $black1;

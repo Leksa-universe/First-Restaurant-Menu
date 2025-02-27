@@ -1,0 +1,421 @@
+.section3 {
+    min-height: 100vh;
+    text-align: center;
+    position: relative;
+    h3 {
+        @include tittle;
+        font-size: 2.5rem;
+        line-height: 36px;
+        user-select: none;
+
+        div {
+            font-size: 2rem;
+        }
+    }
+
+    span img {
+        margin: 30px 10px;
+        user-select: none;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 5vh 5vw;
+    }
+
+    .grid {
+        margin: 100px 0 500px;
+
+        @media screen and (max-width:630px) {
+            display: none;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 55% 45%;
+            grid-template-rows: auto auto;
+            grid-template-areas: 
+            "topl right"
+            "botl right";
+            gap: 20px;
+            height: 400px;
+            min-width: 280px;
+            max-width: 1000px;
+            margin: 0 auto;
+            
+            
+            .infos {
+                background: $white1;
+                display: flex;
+                flex-direction: column;
+                text-align: left;
+                padding: 40px 20px;
+                letter-spacing: 1px;
+                
+                h4 {
+                    padding-left: 5px;
+                    font-size: 1.4rem;
+                    font-weight: 300;
+                    
+                    &::selection {
+                        background: $gold1;
+                        color: $white1;
+                    }
+                }
+                
+                ul {
+                    padding: 25px 0;
+                    display: flex;
+                    
+                    
+                    li {
+                        padding-right: 10px;
+                        color: rgb(170, 170, 170);
+                        font-size: 0.8rem;
+                        font-weight: 300;
+                        
+                        &::selection {
+                            background: $gold1;
+                            color: $white1;
+                        }
+                        
+                        i {
+                            color: rgb(190, 188, 188);
+                        }
+                    }
+                }
+                
+                a {
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-weight: 400;
+                    font-size: 0.8rem;
+                    color: $black1;
+                    padding: 8px 0;
+                    transition: 0.4s;
+                    position: relative;
+                    user-select: none;
+                    
+                    &:hover {
+                        color: $gold1;
+                        
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            border: 1px solid $red1;
+                            top: 0;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            animation: scaleborder 0.5s forwards;
+                            
+                            
+                            @keyframes scaleborder {
+                                0% {
+                                    width: 0;
+                                }
+                                
+                                100% {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                        
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            border: 1px solid $red1;
+                            bottom: 0;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            animation: scaleborder2 0.5s forwards;
+                            
+                            @keyframes scaleborder2 {
+                                0% {
+                                    width: 0;
+                                }
+                                
+                                100% {
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            .top-left {
+                grid-area: topl;
+                display: grid;
+                grid-template-columns: 40% 60%;
+                .img {
+                    background: url(../../../img/event-01.jpg) center/cover;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    .date {
+                        height: 100px;
+                        width: 100px;
+                        background: $black1;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        line-height: 25px;
+                        
+                        
+                        &::before {
+                            content: "08";
+                            color: $white1;
+                            font-size: 1.8rem;
+                        }
+                        
+                        &::after {
+                            content:"July";
+                            color: $white1;
+                            font-size: 1.2rem;
+                            font-weight: 300;
+                        }
+                    }
+                }
+                
+            }
+            
+            .bottom-left {
+                grid-area: botl;
+                display: grid;
+                grid-template-columns: 40% 60%;
+                .img {
+                    background: url(../../../img/event-02.jpg) center/cover;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .date {
+                        height: 100px;
+                        width: 100px;
+                        background: $black1;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        line-height: 25px;
+                        
+                        
+                        &::before {
+                            content: "08";
+                            color: $white1;
+                            font-size: 1.8rem;
+                        }
+                        
+                        &::after {
+                            content:"July";
+                            color: $white1;
+                            font-size: 1.2rem;
+                            font-weight: 300;
+                        }
+                    }
+                }
+            }
+            
+            .right {
+                grid-area: right;
+                background: url(../../../img/event-03.jpg) center/cover;
+                letter-spacing: 1px;
+                padding: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                .info {
+                    background: $white1;
+                    min-height: 350px;
+                    width: 95%;
+                    display: flex;
+                    justify-content: center;   
+                    align-items: center;
+                    flex-direction: column;
+                    padding-top: 80px;
+                    position: relative;
+                    
+                    .date {
+                        height: 80px;
+                        width: 80px;
+                        background: $black1;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        line-height: 25px;
+                        position: absolute;
+                        top: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        
+                        
+                        &::before {
+                            content: "08";
+                            color: $white1;
+                            font-size: 1.8rem;
+                        }
+                        
+                        &::after {
+                            content:"July";
+                            color: $white1;
+                            font-size: 1.2rem;
+                            font-weight: 300;
+                        }
+                    }
+                    
+                    h4 {
+                        padding-left: 5px;
+                        font-size: 1.4rem;
+                        font-weight: 300;
+                        
+                        &::selection {
+                            background: $gold1;
+                            color: $white1;
+                        }
+                    }
+                    
+                    ul {
+                        padding: 25px 0;
+                        display: flex;
+                        
+                        
+                        li {
+                            padding-right: 10px;
+                            color: rgb(170, 170, 170);
+                            font-size: 0.9rem;
+                            font-weight: 300;
+                            padding: 20px;
+                            
+                            &::selection {
+                                background: $gold1;
+                                color: $white1;
+                            }
+                            
+                            i {
+                                color: rgb(190, 188, 188);
+                            }
+                        }
+                    }
+                    
+                    a {
+                        display: flex;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        font-weight: 400;
+                        font-size: 0.8rem;
+                        color: $black1;
+                        padding: 8px 0;
+                        transition: 0.4s;
+                        position: relative;
+                        user-select: none;
+                        
+                        &:hover {
+                            color: $gold1;
+                            
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                border: 1px solid $red1;
+                                top: 0;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                animation: scaleborder 0.5s forwards;
+                                
+                                
+                                @keyframes scaleborder {
+                                    0% {
+                                        width: 0;
+                                    }
+                                    
+                                    100% {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                            
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                border: 1px solid $red1;
+                                bottom: 0;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                animation: scaleborder2 0.5s forwards;
+                                
+                                @keyframes scaleborder2 {
+                                    0% {
+                                        width: 0;
+                                    }
+                                    
+                                    100% {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        } 
+                    }
+                }
+            }
+        }
+    }
+
+    // ***************************CEO*************************************
+
+    .ceo {
+        background: $white1;
+        height: 370px;
+        min-width: 280px;
+        width: 100%;
+        max-width: 1000px;
+        margin: 20px auto;
+        position: relative;
+        position: absolute;
+        bottom: 220px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        img {
+            height: 50px;
+            border-radius: 150px;
+            position: absolute;
+            top: -25px;
+        }
+
+        .ceo-container {
+            width: 80%;
+            margin: 20px auto 0;
+
+            p {
+                line-height: 35px;
+                font-weight: 300;
+
+                i {
+                    transform: translateY(-5px);
+                }
+            }
+
+            h4 {
+                margin: 40px 0 20px;
+                font-size: 1.8rem;
+                font-weight: 300;
+            }
+
+            h5 {
+                font-size: 1.3rem;
+                font-weight: 300;
+                color: $gold2;
+            }
+        }
+    }
+
+    .bg-map {
+        background: url(../../../img/gmap.jpg) center/cover;
+        height: 350px;
+    }
+
+
+}

@@ -76,14 +76,14 @@ header  {
                         }
                     }
 
-                        &::after {
-                            content: "";
-                            position: absolute;
-                            border: 1px solid $red1;
-                            bottom: 0;
-                            left: 50%;
-                            transform: translateX(-50%);
-                            animation: scaleborder2 0.5s forwards;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        border: 1px solid $red1;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        animation: scaleborder2 0.5s forwards;
         
                             @keyframes scaleborder2 {
                                 0% {
@@ -94,9 +94,7 @@ header  {
                                     width: 100%;
                                 }
                             }
-                        }
-
-
+                    }
                 }         
             }
         }

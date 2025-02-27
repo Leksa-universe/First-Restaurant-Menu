@@ -1,0 +1,90 @@
+footer {
+    background: url(../../../img/bg-footer.jpg) center/cover;
+    height: 200px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    .resto {
+        display: flex;
+        flex-direction: column;   
+        justify-content: center;
+        align-items: flex-end;    
+
+        .resto-container {
+            width: 70%;
+            margin-right: 31px;
+
+            h2 {
+                font-family: $font1;
+                color: $gold2;
+                font-size: 2.5rem;
+                font-weight: 300;
+            }
+
+            p {
+                color: $white1;
+                line-height: 30px;
+                font-size: 0.8rem;
+                font-weight: 100;
+            }
+        }
+    }
+
+    .about {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        padding: 30px;
+
+        h6 {
+            text-transform: uppercase;
+            font-size: 0.7rem;
+            font-weight: 400;
+            color: $white1;
+        }
+
+        .newsletter {
+            input {
+                background: transparent;
+                border: 1px solid rgb(53, 41, 41);
+                padding: 10px;
+                width: 250px;
+                margin: 10px 0;
+                color: $white1;
+                font-family: $font3;
+
+                &:focus {
+                    color: $white1;
+                }
+            }
+        }
+
+        .resaux {
+            display: flex;
+
+            ul {
+                display: flex;
+                justify-content: space-between;
+
+                li {
+                    display: flex;
+                    width: 90px;
+                    justify-content: space-around;
+                    align-items: center;
+                    color: $grey1;
+                    font-size: 0.8rem;
+                    font-weight: 100;
+                }
+
+                i {
+                    cursor: pointer;
+                    transition: 0.3s;
+
+                    &:hover {
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+    }
+}
