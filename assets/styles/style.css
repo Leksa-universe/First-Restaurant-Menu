@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Allura";
   src: url(../../fonts/Allura-Regular.ttf);
@@ -29,6 +30,25 @@ body {
   font-family: "Roboto";
   background: rgb(26, 26, 26);
   outline: none;
+}
+body span img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+body h1::-moz-selection, body h2::-moz-selection, body h3::-moz-selection, body h4::-moz-selection, body h5::-moz-selection, body p::-moz-selection, body br::-moz-selection {
+  background: rgb(169, 114, 69);
+  color: rgb(243, 243, 243);
+}
+body h1::selection,
+body h2::selection,
+body h3::selection,
+body h4::selection,
+body h5::selection,
+body p::selection,
+body br::selection {
+  background: rgb(169, 114, 69);
+  color: rgb(243, 243, 243);
 }
 
 header {
@@ -87,7 +107,7 @@ header nav .navbar li {
   position: relative;
 }
 header nav .navbar li:hover {
-  color: rgba(238, 158, 89, 0.801);
+  color: rgb(169, 114, 69);
 }
 header nav .navbar li:hover::before {
   content: "";
@@ -144,7 +164,7 @@ header nav .resaux i {
   transition: 0.3s;
 }
 header nav .resaux i:hover {
-  color: rgba(238, 158, 89, 0.801);
+  color: rgb(169, 114, 69);
 }
 header .header-container {
   width: 60%;
@@ -174,7 +194,7 @@ header .header-container {
 header .header-container h2 {
   text-align: center;
   font-family: "Allura";
-  color: rgba(238, 158, 89, 0.801);
+  color: rgb(169, 114, 69);
   font-weight: 300;
   text-transform: capitalize;
   font-size: 4.5rem;
@@ -249,13 +269,13 @@ header .header-container p {
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  border: 1px dashed rgba(238, 158, 89, 0.801);
+  border: 1px dashed rgb(169, 114, 69);
   margin: 20px;
 }
 .section1 .discover-store h3 {
   text-align: center;
   font-family: "Allura";
-  color: rgba(238, 158, 89, 0.801);
+  color: rgb(169, 114, 69);
   font-weight: 300;
   text-transform: capitalize;
   font-size: 2.8rem;
@@ -290,11 +310,11 @@ header .header-container p {
   line-height: 25px;
 }
 .section1 .discover-store p::-moz-selection {
-  background: rgba(238, 158, 89, 0.801);
+  background: rgb(169, 114, 69);
   color: rgb(243, 243, 243);
 }
 .section1 .discover-store p::selection {
-  background: rgba(238, 158, 89, 0.801);
+  background: rgb(169, 114, 69);
   color: rgb(243, 243, 243);
 }
 @media screen and (max-width: 806px) {
@@ -316,27 +336,27 @@ header .header-container p {
   font-weight: 500;
 }
 .section1 .discover-store .avatar h4::-moz-selection {
-  background: rgba(238, 158, 89, 0.801);
+  background: rgb(169, 114, 69);
   color: rgb(243, 243, 243);
 }
 .section1 .discover-store .avatar h4::selection {
-  background: rgba(238, 158, 89, 0.801);
+  background: rgb(169, 114, 69);
   color: rgb(243, 243, 243);
 }
 .section1 .discover-store .avatar h5 {
   margin-bottom: 30px;
   text-transform: uppercase;
   font-family: "Roboto";
-  color: rgb(109, 109, 109);
+  color: rgb(187, 187, 187);
   font-size: 0.9rem;
   font-weight: 400;
 }
 .section1 .discover-store .avatar h5::-moz-selection {
-  background: rgba(238, 158, 89, 0.801);
+  background: rgb(169, 114, 69);
   color: rgb(243, 243, 243);
 }
 .section1 .discover-store .avatar h5::selection {
-  background: rgba(238, 158, 89, 0.801);
+  background: rgb(169, 114, 69);
   color: rgb(243, 243, 243);
 }
 .section1 .img {
@@ -358,7 +378,7 @@ header .header-container p {
 .section2 .top-part h5 {
   text-align: center;
   font-family: "Allura";
-  color: rgba(238, 158, 89, 0.801);
+  color: rgb(169, 114, 69);
   font-weight: 300;
   text-transform: capitalize;
   font-size: 2.5rem;
@@ -387,12 +407,12 @@ header .header-container p {
 .section2 .top-part nav ul li {
   margin: 30px 0;
   padding: 10px 0;
-  box-shadow: 0 1px 0 0 rgb(109, 109, 109);
+  box-shadow: 0 1px 0 0 rgb(187, 187, 187);
   cursor: pointer;
   transition: 0.2s;
 }
 .section2 .top-part nav ul li:hover {
-  color: rgba(238, 158, 89, 0.801);
+  color: rgb(169, 114, 69);
   box-shadow: 0 1px 0 0 rgb(128, 0, 0);
 }
 .section2 .bottom-part {
@@ -412,7 +432,7 @@ header .header-container p {
   justify-items: center;
   margin: 0 auto;
   transform: translateY(-100px);
-  box-shadow: inset 0px 5px 0 rgba(161, 91, 30, 0.801);
+  box-shadow: inset 0px 5px 0 rgb(184, 124, 75);
 }
 @media screen and (max-width: 980px) {
   .section2 .bottom-part .card {
@@ -478,16 +498,13 @@ header .header-container p {
 }
 .section2 .bottom-part .card .left-part li span,
 .section2 .bottom-part .card .right-part li span {
-  color: rgba(238, 158, 89, 0.801);
+  color: rgb(169, 114, 69);
 }
 
-.online-book {
-  min-height: 500px;
-  padding: 0 10px;
-}
 .online-book .online-book-container {
-  width: 100%;
-  max-width: 80vw;
+  min-height: 300px;
+  width: 95%;
+  max-width: 1300px;
   margin: 60px auto;
   display: grid;
   grid-template-columns: 25% 75%;
@@ -501,28 +518,33 @@ header .header-container p {
 .online-book .online-book-container .opening-time {
   background: black;
   color: rgb(243, 243, 243);
+  padding: 15px;
 }
 .online-book .online-book-container .opening-time .opening-time-container {
-  height: 500px;
-  margin: 15px;
-  border: 1px dashed rgb(109, 109, 109);
+  border: 1px dashed rgb(187, 187, 187);
   text-align: center;
 }
 .online-book .online-book-container .opening-time .opening-time-container h3 {
   text-align: center;
   font-family: "Allura";
-  color: rgba(238, 158, 89, 0.801);
+  color: rgb(169, 114, 69);
   font-weight: 300;
   text-transform: capitalize;
-  font-size: 2.5rem;
-  line-height: 25px;
-  padding: 45px 0 35px;
+  font-size: 3rem;
+  line-height: 27px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  padding-top: 40px;
 }
 .online-book .online-book-container .opening-time .opening-time-container h3 div {
   font-family: "Poppins";
   color: rgb(243, 243, 243);
   text-transform: uppercase;
   font-weight: 800;
+}
+.online-book .online-book-container .opening-time .opening-time-container h3 div {
+  letter-spacing: 2px;
 }
 @media screen and (max-width: 900px) {
   .online-book .online-book-container .opening-time .opening-time-container h3 {
@@ -537,12 +559,15 @@ header .header-container p {
     font-size: 1.6rem;
   }
 }
+.online-book .online-book-container .opening-time .opening-time-container span img {
+  min-height: 35px;
+  margin: 35px 0 50px;
+}
 .online-book .online-book-container .opening-time .opening-time-container h5 {
   text-transform: uppercase;
-  color: rgba(238, 158, 89, 0.801);
-  font-size: 1.1rem;
+  color: rgb(169, 114, 69);
+  font-size: 1.2rem;
   font-weight: 400;
-  margin: 45px 5px 15px;
 }
 @media screen and (max-width: 1310px) {
   .online-book .online-book-container .opening-time .opening-time-container h5 {
@@ -555,9 +580,9 @@ header .header-container p {
   }
 }
 .online-book .online-book-container .opening-time .opening-time-container p {
-  font-size: 0.9rem;
+  margin: 25px 0;
   font-weight: 200;
-  margin: 0 5px;
+  line-height: 20px;
 }
 @media screen and (max-width: 1310px) {
   .online-book .online-book-container .opening-time .opening-time-container p {
@@ -570,47 +595,27 @@ header .header-container p {
   }
 }
 .online-book .online-book-container .opening-time .opening-time-container h4 {
-  margin: 50px 0 30px;
-  color: rgba(238, 158, 89, 0.801);
-}
-@media screen and (max-width: 1310px) {
-  .online-book .online-book-container .opening-time .opening-time-container h4 {
-    font-size: 0.9rem;
-  }
-}
-@media screen and (max-width: 900px) {
-  .online-book .online-book-container .opening-time .opening-time-container h4 {
-    font-size: 1rem;
-  }
+  margin: 40px 0;
+  color: rgb(169, 114, 69);
+  font-size: 1.3rem;
+  font-weight: 400;
 }
 .online-book .online-book-container .reservation {
   background: rgb(243, 243, 243);
-  color: rgb(26, 26, 26);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-@media screen and (max-width: 900px) {
-  .online-book .online-book-container .reservation {
-    min-height: 500px;
-  }
-}
-@media screen and (max-width: 550px) {
-  .online-book .online-book-container .reservation {
-    height: 70vh;
-  }
+  display: grid;
+  grid-template-rows: 30% 5% 65%;
+  text-align: center;
 }
 .online-book .online-book-container .reservation h3 {
   text-align: center;
   font-family: "Allura";
-  color: rgba(238, 158, 89, 0.801);
+  color: rgb(169, 114, 69);
   font-weight: 300;
   text-transform: capitalize;
+  color: rgb(184, 124, 75);
   font-size: 3rem;
-  line-height: 35px;
-  margin-top: 40px;
-  color: rgba(161, 91, 30, 0.801);
+  line-height: 36px;
+  margin-top: 50px;
 }
 .online-book .online-book-container .reservation h3 div {
   font-family: "Poppins";
@@ -619,102 +624,97 @@ header .header-container p {
   font-weight: 800;
 }
 .online-book .online-book-container .reservation h3 div {
-  color: rgb(26, 26, 26);
+  color: black;
   font-size: 2rem;
 }
-.online-book .online-book-container .reservation span {
-  transform: translateY(-30px);
-}
-@media screen and (max-width: 550px) {
-  .online-book .online-book-container .reservation span {
-    transform: translateY(-20px);
-  }
+.online-book .online-book-container .reservation span img {
+  height: 30px;
 }
 .online-book .online-book-container .reservation form {
-  width: 100%;
-  max-width: 700px;
-  margin: 0 auto;
-  padding-left: 10px;
+  width: 70%;
+  margin: 50px auto 0;
   display: grid;
-  grid-template-columns: 28% 28% 28%;
-  justify-content: center;
-  gap: 15px;
-  row-gap: 35px;
-  transform: translateY(-40px);
-}
-@media screen and (max-width: 550px) {
-  .online-book .online-book-container .reservation form {
-    display: block;
-    width: 60%;
-    text-align: center;
-  }
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px 40px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .online-book .online-book-container .reservation form select {
+  height: 55px;
   background: transparent;
-  border: none;
-  border-bottom: 1px solid rgb(109, 109, 109);
-  padding-bottom: 10px;
-  font-family: "Roboto";
-  font-weight: 300;
-  color: rgb(26, 26, 26);
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   outline: none;
-  background: url(../../../img/Down-chevron.png) right/10px no-repeat;
-}
-@media screen and (max-width: 550px) {
-  .online-book .online-book-container .reservation form select {
-    width: 80%;
-  }
-}
-.online-book .online-book-container .reservation form #date, .online-book .online-book-container .reservation form #time, .online-book .online-book-container .reservation form #people {
+  border-style: none;
+  border-bottom: 1px solid rgb(187, 187, 187);
+  padding: 0 5px;
+  background: url(../../../img/Down-chevron.png) right center no-repeat;
+  background-size: 12px;
+  font-family: "Roboto";
+  font-size: 0.9rem;
   cursor: pointer;
 }
-.online-book .online-book-container .reservation form input:not([type=submit]) {
-  width: 80%;
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid rgb(109, 109, 109);
-  padding-bottom: 10px;
-  font-family: "Roboto";
-  font-weight: 300;
-  color: rgb(26, 26, 26);
+.online-book .online-book-container .reservation form select::-moz-selection {
+  -moz-appearance: none;
+       appearance: none;
+  border-style: none;
+  border-bottom: 1px solid rgb(187, 187, 187);
 }
-@media screen and (max-width: 550px) {
-  .online-book .online-book-container .reservation form input:not([type=submit]) {
-    margin: 10px 0;
+.online-book .online-book-container .reservation form select::selection {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-style: none;
+  border-bottom: 1px solid rgb(187, 187, 187);
+}
+.online-book .online-book-container .reservation form input:not(input[type=submit]) {
+  height: 55px;
+  background: transparent;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-style: none;
+  border-bottom: 1px solid rgb(187, 187, 187);
+  font-family: "Roboto";
+  font-size: 0.9rem;
+  outline: none;
+  cursor: pointer;
+}
+.online-book .online-book-container .reservation form input:not(input[type=submit]):focus {
+  color: rgb(169, 114, 69);
+}
+.online-book .online-book-container .reservation form #name, .online-book .online-book-container .reservation form #phone, .online-book .online-book-container .reservation form #email {
+  color: rgb(169, 114, 69);
+}
+.online-book .online-book-container .reservation form input[type=submit] {
+  width: 90%;
+  height: 50px;
+  margin: 0 0 60px;
+  background: rgb(26, 26, 26);
+  border: none;
+  border-radius: 150px;
+  color: rgb(243, 243, 243);
+  text-transform: uppercase;
+  font-family: "Poppins";
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  cursor: pointer;
+  grid-column-start: 2; /* Commence à la deuxième colonne */
+  grid-column-end: 3; /* Se termine à la troisième colonne */
+  transition: 0.6s;
+}
+@media screen and (max-width: 900px) {
+  .online-book .online-book-container .reservation form input[type=submit] {
+    margin: 25px 0 25px;
   }
 }
-.online-book .online-book-container .reservation form input:not([type=submit])::-moz-placeholder {
-  font-family: "Roboto";
-  font-size: 0.9rem;
-  font-weight: 300;
-  color: rgb(26, 26, 26);
-}
-.online-book .online-book-container .reservation form input:not([type=submit])::placeholder {
-  font-family: "Roboto";
-  font-size: 0.9rem;
-  font-weight: 300;
-  color: rgb(26, 26, 26);
-}
-.online-book .online-book-container .reservation button {
-  border: none;
-  background: rgb(20, 20, 20);
-  padding: 15px 30px;
-  border-radius: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: translateY(-40px);
-}
-.online-book .online-book-container .reservation button input {
-  background: transparent;
-  border: none;
-  text-transform: uppercase;
-  color: rgb(243, 243, 243);
-  font-family: "Poppins";
-  font-weight: 300;
+.online-book .online-book-container .reservation form input[type=submit]:hover {
+  color: rgb(169, 114, 69);
+  transform: scaleX(1.2);
   letter-spacing: 5px;
 }
 
@@ -726,7 +726,7 @@ header .header-container p {
 .section3 h3 {
   text-align: center;
   font-family: "Allura";
-  color: rgba(238, 158, 89, 0.801);
+  color: rgb(169, 114, 69);
   font-weight: 300;
   text-transform: capitalize;
   font-size: 2.5rem;
@@ -789,11 +789,11 @@ header .header-container p {
   font-weight: 300;
 }
 .section3 .grid .container .infos h4::-moz-selection {
-  background: rgba(238, 158, 89, 0.801);
+  background: rgb(169, 114, 69);
   color: rgb(243, 243, 243);
 }
 .section3 .grid .container .infos h4::selection {
-  background: rgba(238, 158, 89, 0.801);
+  background: rgb(169, 114, 69);
   color: rgb(243, 243, 243);
 }
 .section3 .grid .container .infos ul {
@@ -807,11 +807,11 @@ header .header-container p {
   font-weight: 300;
 }
 .section3 .grid .container .infos ul li::-moz-selection {
-  background: rgba(238, 158, 89, 0.801);
+  background: rgb(169, 114, 69);
   color: rgb(243, 243, 243);
 }
 .section3 .grid .container .infos ul li::selection {
-  background: rgba(238, 158, 89, 0.801);
+  background: rgb(169, 114, 69);
   color: rgb(243, 243, 243);
 }
 .section3 .grid .container .infos ul li i {
@@ -831,7 +831,7 @@ header .header-container p {
           user-select: none;
 }
 .section3 .grid .container .infos a:hover {
-  color: rgba(238, 158, 89, 0.801);
+  color: rgb(169, 114, 69);
 }
 .section3 .grid .container .infos a:hover::before {
   content: "";
@@ -982,11 +982,11 @@ header .header-container p {
   font-weight: 300;
 }
 .section3 .grid .container .right .info h4::-moz-selection {
-  background: rgba(238, 158, 89, 0.801);
+  background: rgb(169, 114, 69);
   color: rgb(243, 243, 243);
 }
 .section3 .grid .container .right .info h4::selection {
-  background: rgba(238, 158, 89, 0.801);
+  background: rgb(169, 114, 69);
   color: rgb(243, 243, 243);
 }
 .section3 .grid .container .right .info ul {
@@ -1001,11 +1001,11 @@ header .header-container p {
   padding: 20px;
 }
 .section3 .grid .container .right .info ul li::-moz-selection {
-  background: rgba(238, 158, 89, 0.801);
+  background: rgb(169, 114, 69);
   color: rgb(243, 243, 243);
 }
 .section3 .grid .container .right .info ul li::selection {
-  background: rgba(238, 158, 89, 0.801);
+  background: rgb(169, 114, 69);
   color: rgb(243, 243, 243);
 }
 .section3 .grid .container .right .info ul li i {
@@ -1026,7 +1026,7 @@ header .header-container p {
           user-select: none;
 }
 .section3 .grid .container .right .info a:hover {
-  color: rgba(238, 158, 89, 0.801);
+  color: rgb(169, 114, 69);
 }
 .section3 .grid .container .right .info a:hover::before {
   content: "";
@@ -1100,7 +1100,7 @@ header .header-container p {
 .section3 .ceo .ceo-container h5 {
   font-size: 1.3rem;
   font-weight: 300;
-  color: rgba(161, 91, 30, 0.801);
+  color: rgb(184, 124, 75);
 }
 .section3 .bg-map {
   background: url(../../../img/gmap.jpg) center/cover;
@@ -1125,7 +1125,7 @@ footer .resto .resto-container {
 }
 footer .resto .resto-container h2 {
   font-family: "Allura";
-  color: rgba(161, 91, 30, 0.801);
+  color: rgb(184, 124, 75);
   font-size: 2.5rem;
   font-weight: 300;
 }
@@ -1171,7 +1171,7 @@ footer .about .resaux ul li {
   width: 90px;
   justify-content: space-around;
   align-items: center;
-  color: rgb(109, 109, 109);
+  color: rgb(187, 187, 187);
   font-size: 0.8rem;
   font-weight: 100;
 }

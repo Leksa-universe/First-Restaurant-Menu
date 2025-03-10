@@ -15,9 +15,9 @@
 
 $black1: rgb(26, 26, 26);
 $white1: rgb(243, 243, 243);
-$grey1: rgb(109, 109, 109);
-$gold1: rgba(238, 158, 89, 0.801);
-$gold2: rgba(161, 91, 30, 0.801);
+$grey1: rgb(187, 187, 187);
+$gold1: rgb(169, 114, 69);
+$gold2: rgb(184, 124, 75);
 $red1: rgb(128, 0, 0);
 
 $font1: 'Allura';
@@ -30,6 +30,7 @@ $font3: 'Roboto';
     color: $gold1;
     font-weight: 300;
     text-transform: capitalize;
+
     div {
         font-family: $font2;
         color: $white1;
@@ -57,4 +58,21 @@ body {
     font-family: $font3;
     background: $black1;
     outline: none;
+
+    span img{
+        user-select: none;
+    }
+
+    h1::selection,
+    h2::selection,
+    h3::selection,
+    h4::selection,
+    h5::selection,
+    p::selection,
+    br::selection {
+        background: $gold1;
+        color: $white1;
+    }
+
+
 }

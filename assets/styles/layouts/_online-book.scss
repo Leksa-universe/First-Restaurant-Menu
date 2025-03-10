@@ -1,10 +1,8 @@
 .online-book {
-    min-height: 500px;
-    padding: 0 10px;
-
     .online-book-container {
-        width: 100%;
-        max-width: 80vw;
+        min-height: 300px;
+        width: 95%;
+        max-width: 1300px;
         margin: 60px auto;
         display: grid;
         grid-template-columns: 25% 75%;
@@ -17,18 +15,22 @@
         .opening-time {
             background: black;
             color: $white1;
+            padding: 15px;           
             
             .opening-time-container {
-                height: 500px;
-                margin: 15px;           
                 border: 1px dashed $grey1;
                 text-align: center;
                 
                 h3 {
                     @include tittle;
-                    font-size: 2.5rem;
-                    line-height: 25px;
-                    padding: 45px 0 35px;
+                    font-size: 3rem;
+                    line-height: 27px;
+                    user-select: none;
+                    padding-top: 40px;
+
+                    div {
+                        letter-spacing: 2px;
+                    }
                     
                     @media screen and (max-width: 900px) {
                         font-size: 3rem;                        
@@ -41,13 +43,17 @@
                         }
                     }
                 }
+
+                span img{
+                    min-height: 35px;
+                    margin: 35px 0 50px;
+                }
                 
                 h5 {
                     text-transform: uppercase;
                     color: $gold1;
-                    font-size: 1.1rem;
+                    font-size: 1.2rem;
                     font-weight: 400;
-                    margin: 45px 5px 15px;
                     
                     @media screen and (max-width: 1310px) {
                         font-size: 0.9rem;                        
@@ -59,9 +65,9 @@
                 }
                 
                 p {
-                    font-size: 0.9rem;
+                    margin: 25px 0;
                     font-weight: 200;
-                    margin: 0 5px;
+                    line-height: 20px;
                     
                     @media screen and (max-width: 1310px) {
                         font-size: 0.7rem;                        
@@ -73,16 +79,10 @@
                 }
                 
                 h4 {
-                    margin: 50px 0 30px;
+                    margin: 40px 0;
                     color: $gold1;
-
-                    @media screen and (max-width: 1310px) {
-                        font-size: 0.9rem;                        
-                    }
-
-                    @media screen and (max-width: 900px) {
-                        font-size: 1rem;                        
-                    }
+                    font-size: 1.3rem;
+                    font-weight: 400;
                 }
             }
             
@@ -91,129 +91,107 @@
         
         .reservation {
             background: $white1;
-            color: $black1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
+            display: grid;
+            grid-template-rows: 30% 5% 65%;
+            text-align: center;
 
-            @media screen and (max-width: 900px) {
-                min-height: 500px;                      
-            }
-
-            @media screen and (max-width: 550px) {
-                height: 70vh;                       
-            }
-            
-            h3 {
-                @include tittle;
-                font-size: 3rem;
-                line-height: 35px;
-                margin-top: 40px;
-                color: $gold2;
-                
-                div {
-                    color: $black1;
-                    font-size: 2rem;
+                h3 {
+                    @include tittle;
+                    color: $gold2;
+                    font-size: 3rem;
+                    line-height: 36px;
+                    margin-top: 50px;
+                    
+                    div {
+                        color: black;
+                        font-size: 2rem;
+                    }
                 }
-            }
-            
-            span {
-                transform: translateY(-30px);
 
-                @media screen and (max-width: 550px) {
-                    transform: translateY(-20px);                    
-                }
+            span img{
+                height: 30px;
             }
-            
+
             form {
-                width: 100%;
-                max-width: 700px;
-                margin: 0 auto;
-                padding-left: 10px;
+                width: 70%;
+                margin: 50px auto 0;
                 display: grid;
-                grid-template-columns: 28% 28% 28%;
-                justify-content: center;
-                gap: 15px;
-                row-gap: 35px;
-                transform: translateY(-40px);
-
-                @media screen and (max-width: 550px) {
-                    display: block;  
-                    width: 60%;          
-                    text-align: center;   
-                }
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+                gap: 10px 40px;
+                user-select: none;
                 
                 select {
+                    height: 55px;
                     background: transparent;
-                    border: none;
-                    border-bottom: 1px solid $grey1;
-                    padding-bottom: 10px;
-                    font-family: $font3;
-                    font-weight: 300;
-                    color: $black1;
                     appearance: none;
                     outline: none;
-                    // **********DOWN CHEVRON**************
-                    background: url(../../../img/Down-chevron.png) right/10px no-repeat;
-
-                    @media screen and (max-width: 550px) {
-                        width: 80%;                        
-                    }
-                    
-                }
-                
-                #date, #time, #people {
-                    cursor: pointer;
-                }
-                
-                input:not([type="submit"]) {
-                    width: 80%;
-                    background: transparent;
-                    border: none;
+                    border-style: none;
                     border-bottom: 1px solid $grey1;
-                    padding-bottom: 10px;
+                    padding: 0 5px;
+                    // ****************ARROW*******************
+                    background: url(../../../img/Down-chevron.png) right center no-repeat;
+                    background-size: 12px;
                     font-family: $font3;
-                    font-weight: 300;
-                    color: $black1;
+                    font-size: 0.9rem;
+                    cursor: pointer;
 
-                    @media screen and (max-width: 550px) {
-                        margin: 10px 0;                        
+                    &::selection {
+                        appearance: none;
+                        border-style: none;
+                        border-bottom: 1px solid $grey1;
                     }
-                    
-                    &::placeholder {
-                        font-family: $font3;
-                        font-size: 0.9rem;
-                        font-weight: 300;
-                        color: $black1;
-                    }                   
+                }
+
+                input:not(input[type="submit"]) {
+                    height: 55px;
+                    background: transparent;
+                    appearance: none;
+                    border-style: none;
+                    border-bottom: 1px solid $grey1;
+                    font-family: $font3;
+                    font-size: 0.9rem;
+                    outline: none;
+                    cursor: pointer;
+
+                    &:focus {
+                        color: $gold1;
+                    }
+                }
+                
+                #name, #phone, #email {
+                    color: $gold1;
+                }
+
+                input[type="submit"] {
+                    width: 90%;
+                    height: 50px;
+                    margin: 0 0 60px;
+                    background: $black1;
+                    border: none;
+                    border-radius: 150px;
+                    color: $white1;
+                    text-transform: uppercase;
+                    font-family: $font2;
+                    font-size: 0.9rem;
+                    font-weight: 400;
+                    letter-spacing: 2px;
+                    cursor: pointer;
+                    grid-column-start: 2; /* Commence à la deuxième colonne */
+                    grid-column-end: 3; /* Se termine à la troisième colonne */
+                    transition: 0.6s;
+
+                    @media screen and (max-width:900px){
+                        margin: 25px 0 25px;
+                    }
+
+                    &:hover {
+                        color: $gold1;
+                        transform: scaleX(1.2);
+                        letter-spacing: 5px;
+                    }
                 }
             }
-                
-                
-                button {    
-                 border: none;
-                 background: rgb(20, 20, 20);
-                 padding: 15px 30px;
-                 border-radius: 50px;
-                 display: flex;
-                 justify-content: center;
-                 align-items: center;
-                 transform: translateY(-40px);
-
-                 input {
-                    background: transparent;
-                    border: none;
-                    text-transform: uppercase;
-                    color: $white1;
-                    font-family: $font2;
-                    font-weight: 300;
-                    letter-spacing: 5px;
-
-                 }
-             
-                } 
         }
-        
     }
 }
