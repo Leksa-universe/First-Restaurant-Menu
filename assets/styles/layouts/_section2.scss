@@ -20,13 +20,15 @@
             ul {
                 display: flex;
                 justify-content: space-around;
-                min-width: 300px;
+                min-width: 200px;
                 width: 100%;
                 max-width: 600px;
                 margin: 0 auto;
                 color: $white1;
                 font-weight: 200;
                 text-transform: capitalize;
+
+                
                 
                 li {
                     margin: 30px 0;
@@ -34,6 +36,11 @@
                     box-shadow: 0 1px 0 0 $grey1 ;
                     cursor: pointer;
                     transition: 0.2s;
+
+                    @media screen and (max-width: 330px) {
+                        font-size: 0.7rem
+                        
+                    }
                     
                     &:hover {
                         color: $gold1;

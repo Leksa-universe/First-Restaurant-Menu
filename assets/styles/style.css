@@ -255,12 +255,11 @@ header .header-container p {
   background: rgb(243, 243, 243);
   display: grid;
   grid-template-columns: 55% 45%;
-  height: 60vh;
+  min-height: 800px;
 }
 @media screen and (max-width: 626px) {
   .section1 {
     display: flex;
-    height: 70vh;
   }
 }
 .section1 .discover-store {
@@ -278,9 +277,9 @@ header .header-container p {
   color: rgb(169, 114, 69);
   font-weight: 300;
   text-transform: capitalize;
-  font-size: 2.8rem;
+  font-size: 3.2rem;
   line-height: 30px;
-  margin-top: 25px;
+  margin: 50px 0;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -293,7 +292,7 @@ header .header-container p {
 }
 .section1 .discover-store h3 div {
   color: rgb(26, 26, 26);
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 .section1 .discover-store span img {
   height: 35px;
@@ -303,11 +302,11 @@ header .header-container p {
           user-select: none;
 }
 .section1 .discover-store p {
-  margin: 15px;
+  padding: 30px;
   font-family: "Roboto";
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   font-weight: 300;
-  line-height: 25px;
+  line-height: 40px;
 }
 .section1 .discover-store p::-moz-selection {
   background: rgb(169, 114, 69);
@@ -317,9 +316,15 @@ header .header-container p {
   background: rgb(169, 114, 69);
   color: rgb(243, 243, 243);
 }
-@media screen and (max-width: 806px) {
+@media screen and (max-width: 1200px) {
   .section1 .discover-store p {
-    font-size: 0.8rem;
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .section1 .discover-store p {
+    font-size: 1rem;
+    line-height: 30px;
   }
 }
 .section1 .discover-store .avatar img {
@@ -396,7 +401,7 @@ header .header-container p {
 .section2 .top-part nav ul {
   display: flex;
   justify-content: space-around;
-  min-width: 300px;
+  min-width: 200px;
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
@@ -410,6 +415,11 @@ header .header-container p {
   box-shadow: 0 1px 0 0 rgb(187, 187, 187);
   cursor: pointer;
   transition: 0.2s;
+}
+@media screen and (max-width: 330px) {
+  .section2 .top-part nav ul li {
+    font-size: 0.7rem;
+  }
 }
 .section2 .top-part nav ul li:hover {
   color: rgb(169, 114, 69);
@@ -646,8 +656,9 @@ header .header-container p {
   height: 30px;
 }
 .online-book .online-book-container .reservation form {
-  width: 70%;
+  min-width: 300px;
   margin: 50px auto 0;
+  padding: 0 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
@@ -655,6 +666,14 @@ header .header-container p {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+}
+@media screen and (max-width: 690px) {
+  .online-book .online-book-container .reservation form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 70%;
+  }
 }
 .online-book .online-book-container .reservation form select {
   height: 55px;
@@ -705,7 +724,8 @@ header .header-container p {
   color: rgb(169, 114, 69);
 }
 .online-book .online-book-container .reservation form input[type=submit] {
-  width: 90%;
+  min-width: 180px;
+  max-width: 500px;
   height: 50px;
   margin: 0 0 60px;
   background: rgb(26, 26, 26);
@@ -724,7 +744,8 @@ header .header-container p {
 }
 @media screen and (max-width: 900px) {
   .online-book .online-book-container .reservation form input[type=submit] {
-    margin: 25px 0 25px;
+    margin: 25px auto;
+    height: 70px;
   }
 }
 .online-book .online-book-container .reservation form input[type=submit]:hover {
@@ -734,9 +755,14 @@ header .header-container p {
 }
 
 .section3 {
-  min-height: 100vh;
+  min-height: 400px;
   text-align: center;
   position: relative;
+}
+@media screen and (max-width: 630px) {
+  .section3 {
+    min-height: 700px;
+  }
 }
 .section3 h3 {
   text-align: center;
@@ -771,7 +797,7 @@ header .header-container p {
   margin: 0 auto;
 }
 .section3 .grid {
-  margin: 100px 0 500px;
+  margin: 100px 0 400px;
 }
 @media screen and (max-width: 630px) {
   .section3 .grid {
@@ -784,8 +810,7 @@ header .header-container p {
   grid-template-rows: auto auto;
   grid-template-areas: "topl right" "botl right";
   gap: 20px;
-  height: 400px;
-  margin: 0 auto;
+  min-height: 300px;
 }
 .section3 .grid .container .infos {
   background: rgb(243, 243, 243);
@@ -1076,33 +1101,43 @@ header .header-container p {
 }
 .section3 .ceo {
   background: rgb(243, 243, 243);
-  height: 370px;
-  min-width: 280px;
-  width: 100%;
-  max-width: 1000px;
-  margin: 20px auto;
-  position: relative;
+  width: 90%;
+  max-width: 1150px;
+  min-height: 350px;
+  max-height: 500px;
+  padding: 20px;
   position: absolute;
-  bottom: 220px;
+  bottom: 240px;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .section3 .ceo img {
-  height: 50px;
+  height: 70px;
   border-radius: 150px;
   position: absolute;
-  top: -25px;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
 }
 .section3 .ceo .ceo-container {
-  width: 80%;
   margin: 20px auto 0;
 }
 .section3 .ceo .ceo-container p {
   line-height: 35px;
   font-weight: 300;
+}
+@media screen and (max-width: 630px) {
+  .section3 .ceo .ceo-container p {
+    font-size: 0.8rem;
+    line-height: 25px;
+  }
 }
 .section3 .ceo .ceo-container p i {
   transform: translateY(-5px);
@@ -1112,14 +1147,32 @@ header .header-container p {
   font-size: 1.8rem;
   font-weight: 300;
 }
+@media screen and (max-width: 630px) {
+  .section3 .ceo .ceo-container h4 {
+    font-size: 1.4rem;
+  }
+}
 .section3 .ceo .ceo-container h5 {
   font-size: 1.3rem;
   font-weight: 300;
   color: rgb(184, 124, 75);
 }
-.section3 .bg-map {
-  background: url(../../../img/gmap.jpg) center/cover;
-  height: 350px;
+@media screen and (max-width: 630px) {
+  .section3 .ceo .ceo-container h5 {
+    font-size: 1.1rem;
+  }
+}
+.section3 .bg-map img {
+  display: block;
+  width: 100%;
+  height: 400px;
+}
+@media screen and (max-width: 630px) {
+  .section3 .bg-map img {
+    position: absolute;
+    bottom: 0;
+    height: 400px;
+  }
 }
 
 footer {
@@ -1128,11 +1181,23 @@ footer {
   display: grid;
   grid-template-columns: 50% 50%;
 }
+@media screen and (max-width: 700px) {
+  footer {
+    background: none;
+    display: block;
+    text-align: start;
+  }
+}
 footer .resto {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
+}
+@media screen and (max-width: 700px) {
+  footer .resto {
+    display: none;
+  }
 }
 footer .resto .resto-container {
   width: 70%;
@@ -1159,6 +1224,11 @@ footer .about {
   flex-direction: column;
   padding: 30px;
 }
+@media screen and (max-width: 700px) {
+  footer .about {
+    gap: 40px;
+  }
+}
 footer .about h6 {
   text-transform: uppercase;
   font-size: 0.7rem;
@@ -1173,6 +1243,16 @@ footer .about h6::selection {
   background: rgb(169, 114, 69);
   color: rgb(243, 243, 243);
 }
+@media screen and (max-width: 700px) {
+  footer .about .newsletter {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 700px) {
+  footer .about .newsletter h6 {
+    font-size: 0.9rem;
+  }
+}
 footer .about .newsletter input {
   background: transparent;
   border: 1px solid rgb(53, 41, 41);
@@ -1185,15 +1265,40 @@ footer .about .newsletter input {
      -moz-user-select: none;
           user-select: none;
 }
+@media screen and (max-width: 700px) {
+  footer .about .newsletter input {
+    text-align: center;
+  }
+}
 footer .about .newsletter input:focus {
   color: rgb(169, 114, 69);
 }
 footer .about .resaux {
   display: flex;
 }
+@media screen and (max-width: 700px) {
+  footer .about .resaux {
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 700px) {
+  footer .about .resaux h6 {
+    font-size: 0.9rem;
+  }
+}
 footer .about .resaux ul {
   display: flex;
   justify-content: space-between;
+  min-width: 250px;
+  width: 100%;
+  max-width: 330px;
+}
+@media screen and (max-width: 700px) {
+  footer .about .resaux ul {
+    align-items: center;
+  }
 }
 footer .about .resaux ul li {
   display: flex;

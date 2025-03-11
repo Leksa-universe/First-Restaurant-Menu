@@ -2,11 +2,10 @@
     background: $white1;
     display: grid;
     grid-template-columns: 55% 45%;
-    height: 60vh;
+    min-height: 800px;
 
     @media screen and (max-width: 626px) {
         display: flex;  
-        height: 70vh;      
     }
 
     .discover-store {   
@@ -18,18 +17,19 @@
         border: 1px dashed $gold1;
         margin: 20px;
 
+
         
         
         h3 {
             @include tittle;
-            font-size: 2.8rem;
+            font-size: 3.2rem;
             line-height: 30px;
-            margin-top: 25px;
+            margin: 50px 0;
             user-select: none;
             
             div {
                 color: $black1;
-                font-size: 1.5rem;
+                font-size: 2rem;
             }
         }
 
@@ -38,21 +38,26 @@
             filter:  brightness(0.7);
             user-select: none;
         }
-
+        
         p {
-            margin: 15px;
+            padding: 30px;
             font-family: $font3;
-            font-size: 1.1rem;
+            font-size: 1.4rem;
             font-weight: 300;
-            line-height: 25px;
+            line-height: 40px;
 
             &::selection {
                 background: $gold1;
                 color: $white1;
             }
 
-            @media screen and (max-width: 806px) {
-                font-size: 0.8rem;
+            @media screen and (max-width: 1200px) {
+                font-size: 1.1rem;                
+            }
+
+            @media screen and (max-width: 450px) {
+                font-size: 1rem;
+                line-height: 30px;
                 
             }
         }
