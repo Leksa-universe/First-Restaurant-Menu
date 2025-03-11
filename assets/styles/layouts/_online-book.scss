@@ -20,6 +20,8 @@
             .opening-time-container {
                 border: 1px dashed $grey1;
                 text-align: center;
+                height: 100%;
+                padding-top: 20px;
                 
                 h3 {
                     @include tittle;
@@ -94,6 +96,7 @@
             display: grid;
             grid-template-rows: 30% 5% 65%;
             text-align: center;
+            padding-top: 25px;
 
                 h3 {
                     @include tittle;

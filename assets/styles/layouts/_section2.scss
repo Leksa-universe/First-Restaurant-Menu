@@ -90,6 +90,7 @@
                     border-bottom: 1px dashed $black1;
                     img {
                         border-radius: 150px;
+                        user-select: none;
                     }
                     .li-container {
                         display: flex;  
@@ -124,6 +125,11 @@
                     
                     span {
                         color: $gold1;
+
+                        &::selection {
+                            background: $gold1;
+                            color: $white1;
+                        }
                     }
                     
                 }

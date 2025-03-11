@@ -19,10 +19,9 @@
     }
 
     .container {
-        width: 100%;
+        width: 90%;
         max-width: 1200px;
         margin: 0 auto;
-        padding: 5vh 5vw;
     }
 
     .grid {
@@ -40,8 +39,6 @@
             "botl right";
             gap: 20px;
             height: 400px;
-            min-width: 280px;
-            max-width: 1000px;
             margin: 0 auto;
             
             
@@ -383,6 +380,7 @@
             border-radius: 150px;
             position: absolute;
             top: -25px;
+            user-select: none;
         }
 
         .ceo-container {

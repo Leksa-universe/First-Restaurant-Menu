@@ -462,6 +462,9 @@ header .header-container p {
 .section2 .bottom-part .card .left-part li img,
 .section2 .bottom-part .card .right-part li img {
   border-radius: 150px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .section2 .bottom-part .card .left-part li .li-container,
 .section2 .bottom-part .card .right-part li .li-container {
@@ -500,6 +503,15 @@ header .header-container p {
 .section2 .bottom-part .card .right-part li span {
   color: rgb(169, 114, 69);
 }
+.section2 .bottom-part .card .left-part li span::-moz-selection, .section2 .bottom-part .card .right-part li span::-moz-selection {
+  background: rgb(169, 114, 69);
+  color: rgb(243, 243, 243);
+}
+.section2 .bottom-part .card .left-part li span::selection,
+.section2 .bottom-part .card .right-part li span::selection {
+  background: rgb(169, 114, 69);
+  color: rgb(243, 243, 243);
+}
 
 .online-book .online-book-container {
   min-height: 300px;
@@ -523,6 +535,8 @@ header .header-container p {
 .online-book .online-book-container .opening-time .opening-time-container {
   border: 1px dashed rgb(187, 187, 187);
   text-align: center;
+  height: 100%;
+  padding-top: 20px;
 }
 .online-book .online-book-container .opening-time .opening-time-container h3 {
   text-align: center;
@@ -605,6 +619,7 @@ header .header-container p {
   display: grid;
   grid-template-rows: 30% 5% 65%;
   text-align: center;
+  padding-top: 25px;
 }
 .online-book .online-book-container .reservation h3 {
   text-align: center;
@@ -751,10 +766,9 @@ header .header-container p {
           user-select: none;
 }
 .section3 .container {
-  width: 100%;
+  width: 90%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 5vh 5vw;
 }
 .section3 .grid {
   margin: 100px 0 500px;
@@ -771,8 +785,6 @@ header .header-container p {
   grid-template-areas: "topl right" "botl right";
   gap: 20px;
   height: 400px;
-  min-width: 280px;
-  max-width: 1000px;
   margin: 0 auto;
 }
 .section3 .grid .container .infos {
@@ -1080,6 +1092,9 @@ header .header-container p {
   border-radius: 150px;
   position: absolute;
   top: -25px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .section3 .ceo .ceo-container {
   width: 80%;
@@ -1128,6 +1143,9 @@ footer .resto .resto-container h2 {
   color: rgb(184, 124, 75);
   font-size: 2.5rem;
   font-weight: 300;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 footer .resto .resto-container p {
   color: rgb(243, 243, 243);
@@ -1147,17 +1165,28 @@ footer .about h6 {
   font-weight: 400;
   color: rgb(243, 243, 243);
 }
+footer .about h6::-moz-selection {
+  background: rgb(169, 114, 69);
+  color: rgb(243, 243, 243);
+}
+footer .about h6::selection {
+  background: rgb(169, 114, 69);
+  color: rgb(243, 243, 243);
+}
 footer .about .newsletter input {
   background: transparent;
   border: 1px solid rgb(53, 41, 41);
   padding: 10px;
   width: 250px;
   margin: 10px 0;
-  color: rgb(243, 243, 243);
+  color: rgb(169, 114, 69);
   font-family: "Roboto";
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 footer .about .newsletter input:focus {
-  color: rgb(243, 243, 243);
+  color: rgb(169, 114, 69);
 }
 footer .about .resaux {
   display: flex;
@@ -1181,4 +1210,5 @@ footer .about .resaux ul i {
 }
 footer .about .resaux ul i:hover {
   transform: scale(1.2);
+  color: rgb(169, 114, 69);
 }/*# sourceMappingURL=style.css.map */
